@@ -1,0 +1,56 @@
+@(message: String)
+
+@main("Welcome to Play 2.1") {
+
+	<link rel="stylesheet" media="screen" href="/@@documentation/resources/style/main.css">
+	<link rel="stylesheet" media="screen" href="//cdn.jsdelivr.net/foundation/4.1.6/css/foundation.min.css">
+	<section id="top">
+		<div class="wrapper">
+			<h1><a href="">Play! 2.1.1 w/ Vagrant</a></h1>
+		</div>
+	</section>
+
+	<div id="content" class="wrapper doc">
+		<h2 id="what-is-this">What is this?</h2>
+		<p>A Ubuntu 10.04 Vagrant setup with <a href="http://www.playframework.com/documentation/2.1.1/ScalaHome">Play! 2.1.1</a> and <a href="http://docs.scala-lang.org/">Scala 2.10.1</a>.</p>
+		<h2 id="what-else-is-on-here">What Else is on Here?</h2>
+		<ul>
+			<li>zsh       - Because I am far too used to it to switch back to bash</li>
+			<li>oh_my_zsh - Otherwise zsh is a pain to configure especially from Chef</li>
+			<li>git       - Used for pulling down oh_my_zsh and your projects</li>
+			<li>screen    - Used to run Play! in interactive mode in the background</li>
+		</ul>
+		<h2 id="usage">Usage</h2>
+		<p>Some basic information on interacting with the vagrant box</p>
+		<h3 id="port-forwards">Port Forwards</h3>
+		<ul>
+			<li>9000 - Play</li>
+		</ul>
+		<h3 id="custom-commands">Custom Commands</h3>
+		<ul>
+			<li><code>play_console</code>: This will connect you to the GNU screen on which the play console is running. To disconnect without exiting Play! do <code>ctrl + a + d</code>. To stop play do <code>ctrl + d</code> as normal. </li>
+		</ul>
+		<h3 id="vagrant">Vagrant</h3>
+		<p>Vagrant is <a href="http://vagrantup.com/docs/index.html">very well documented</a> but here are a few common commands:</p>
+		<ul>
+			<li><code>vagrant up</code> starts the virtual machine and provisions it</li>
+			<li><code>vagrant suspend</code> will essentially put the machine to 'sleep' with <code>vagrant resume</code> waking it back up</li>
+			<li><code>vagrant halt</code> attempts a graceful shutdown of the machine and will need to be brought back with <code>vagrant up</code></li>
+			<li><code>vagrant ssh</code> gives you shell access to the virtual machine</li>
+		</ul>
+		<h2>
+			Support?
+		</h2>
+		<p>Hit me up on Twitter </p><a href="https://twitter.com/intent/tweet?screen_name=ReluctantHipstr" class="twitter-mention-button" data-related="ReluctantHipstr">Tweet to @@ReluctantHipstr</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<hr />
+		<h5 id="virtual-machine-specifications">Virtual Machine Specifications</h5>
+		<ul>
+			<li>OS     - Ubuntu 10.04</li>
+			<li>Play   - 2.1.1</li>
+			<li>Scala  - 2.10.1</li>
+			<li>JDK    - OpenJDK 1.6.0_27</li>
+		</ul>
+	</div>
+
+}
